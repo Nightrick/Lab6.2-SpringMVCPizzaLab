@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;pizzalab/src/main/webapp/WEB-INF/views/pizzahome.jsp&apos; to &apos;homepage.jsp&apos;" description="Rename resource &apos;pizzahome.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/views/pizzahome.jsp" name="homepage.jsp" stamp="1656638972108" updateReferences="true"/>
+</session>

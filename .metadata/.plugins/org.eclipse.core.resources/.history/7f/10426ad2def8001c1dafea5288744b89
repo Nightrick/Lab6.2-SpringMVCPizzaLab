@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BrushPizzeria</title>
+</head>
+<body>
+<header>
+        <h1> Welcome to Brush Pizzeria!</h1>
+</header>
+<div>
+	<h3>Specialty Pizzas</h3>
+	<ul>
+        <li><a href="aboutMe.html">Hawiian Pizza</a></li>
+        <li><a href="javaPortfolio.html">The Brush Special</a></li>
+		<li><a href="javaPortfolio.html">Pandemic Pizza</a></li>
+    </ul>
+
+
+</div>
+
+</body>
+</html>

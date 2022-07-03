@@ -1,0 +1,56 @@
+package co.grandcircus.pizzalab;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class PizzaLabController {
+	
+	@RequestMapping("/")
+	public String homePage() {
+		return "homepage";
+	}
+	
+	@RequestMapping("/custompizza")
+	public String customPizza() {
+		return "custompizza";
+	}
+	
+	@RequestMapping("/review")
+	public String review() {
+		return "review";
+	}
+	
+	/*
+	@RequestMapping("/reviewconfirmation")
+	public String reviewConfirmation() {
+		return "reviewconfirmation";
+	}
+	*/
+	
+	@PostMapping("/reviewconfirmation")
+	public ModelAndView reviewConfirmation() {
+		ModelAndView modelAndView = new ModelAndView("reviewconfirmation");
+		modelAndView.addObject("reviewDetails", "Testing data");
+		return modelAndView;
+	}
+	
+	@RequestMapping("/hawaiianpizza")
+	public String hawaiianPizza() {
+		return "hawaiianpizza";
+	}
+	
+	@RequestMapping("/thebrushspecial")
+	public String theBrushSpecial() {
+		return "thebrushspecial";
+	}
+	
+	@RequestMapping("/pandemicpizza")
+	public String pandemicPizza() {
+		return "pandemicpizza";
+	}
+
+}

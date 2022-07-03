@@ -1,0 +1,11 @@
+package co.grandcircus.pizzalab;
+
+public class Review {
+	
+	String name;
+	String comment;
+	String rating;
+	
+
+
+}
