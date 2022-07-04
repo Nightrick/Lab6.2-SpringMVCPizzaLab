@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Pizza your way!</title>
+<link rel="stylesheet" href = "/style.css" />
+</head>
+<body>
+<div class="header">
+        <h1> Pizza your way!</h1>
+  <div class="topnav">
+  	<a href="/">Home</a>
+  	<a href="/hawaiianpizza">Hawaiian Pizza</a>
+  	<a href="/thebrushspecial">The Brush Special</a>
+  	<a href="/pandemicpizza">Pandemic Pizza</a>
+  	<a class="active" href="/custompizza">Custom Pizza</a>
+  	<a href="/review">Review Us</a>  
+   </div>
+</div>
+<h2 class="customheader">Tell Charles E. Cheddar how you want your piping hot pizza pie!</h2>
+<form class="form" method = "POST" action ="/custompizzaconfirmation">
+<div class = "customsize">
+<label for="customsize" >Size:</label>
+<select name="size" id="customsize" class="customheader">
+  <option value="Small">Small</option>
+  <option value="Medium">Medium</option>
+  <option value="Large">Large</option>
+</select>
+</div>
+<br>
+<div class="customtoppings"> 
+<label for="toppings">Toppings (between 1-5):</label>
+<input type="number" id="toppings" name="toppings" min="1" max="5">
+</div>
+<br>
+<div class="customcrust">
+<input type="checkbox" id="gluten-freecrust" name="crust" value="Gluten-free Crust ($2.00)">
+<input type="hidden" id="normal crust" name="crust" value ="Normal Crust">
+<label for="gluten-freecrust">Gluten-free Crust? ($2.00 extra)</label><br>
+</div>
+<br>
+<div class="specialinstructions">
+
+  Special Instructions:
+<br>
+<textarea name="specialInstructions" form="usrform">Enter text here...</textarea>
+<br>
+<label for="submit"></label><br>
+  <input type="submit" id="submit" name="submit" ><br>
+</div>
+</form>
+</body>
+</html>

@@ -10,15 +10,45 @@
 <body>
 <div class="header">
         <h1> Pizza your way!</h1>
-        <h5>Custom pies for cool guys! Make a slice and prove you're nice!</h5>
-  <div class="topnav">
+<div class="topnav">
   	<a href="/">Home</a>
-  	<a href="/hawaiianpizza">Hawaiian Pizza</a>
-  	<a href="/thebrushspecial">The Brush Special</a>
-  	<a href="/pandemicpizza">Pandemic Pizza</a>
+  	<a href="/specialtypizza/?name=Hawaiian Pizza&price=$19.59">Hawaiian Pizza</a>
+  	<a href="/specialtypizza/?name=The Brush Special&price=$19.91">The Brush Special</a>
+  	<a href="/specialtypizza/?name=Pandemic Pizza&price=$20.20">Pandemic Pizza</a>
   	<a class="active" href="/custompizza">Custom Pizza</a>
   	<a href="/review">Review Us</a>  
-   </div>
+  </div>
 </div>
+<h2 class="customheader">Tell Charles E. Cheddar how you want your piping hot pizza pie!</h2>
+<form class="form" method = "POST" action ="/custompizzaconfirmation">
+<div class = "customsize">
+<label for="customsize" >Size:</label>
+<select name="size" id="customsize" class="customheader">
+  <option value="Small">Small</option>
+  <option value="Medium">Medium</option>
+  <option value="Large">Large</option>
+</select>
+</div>
+<br>
+<div class="customtoppings"> 
+<label for="toppings">Toppings (between 1-5):</label>
+<input type="number" id="toppings" name="toppings" min="1" max="5">
+</div>
+<br>
+<div class="customcrust">
+<input type="checkbox" id="gluten-freecrust" name="specialCrust" value="true">
+<label for="gluten-freecrust">Gluten-free Crust? ($2.00 extra)</label><br>
+</div>
+<br>
+<div class="specialinstructions">
+
+  Special Instructions:
+<br>
+<textarea name="specialInstructions">Enter text here...</textarea>
+<br>
+<label for="submit"></label><br>
+  <input type="submit" id="submit" name="submit" ><br>
+</div>
+</form>
 </body>
 </html>

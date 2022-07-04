@@ -1,0 +1,109 @@
+body{
+	background-color: wheat;
+}
+
+.header{
+	padding: 60px;
+	text-align: center;
+	background: red;
+	color: whitesmoke;
+	font-size: 30px;
+}
+
+.pizzaimages{ 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.specialtypizzainfo{
+    padding: 40px;
+	text-align: center;
+	font-size: 20px;
+}
+
+.homelink{
+	text-align: center;
+}
+
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: green;
+  color: white;
+}
+
+.form{
+	text-align: center;
+}
+
+.founderpic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+  animation: rotation 2s infinite linear;
+}
+
+@keyframes rotation{
+  from{
+    transform:rotate(0deg);
+  }
+
+  to{
+    transform:rotate(90deg);
+  }
+}
+
+.homepageopeningline{
+	text-align: center;
+}
+
+.reviewdetails{
+	text-align: center;
+}
+
+.reviewdetailsheader{
+	text-align: center;
+}
+
+.customheader{
+	text-align: center;
+}
+
+.customsize{
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.customtoppings{
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.customcrust{
+	text-align: center;
+}
+
+.specialinstructions{
+	text-align: center;
+}
+
+.ordertotal{
+	text-align: center;
+	style: currency: 'USD'
+}
+

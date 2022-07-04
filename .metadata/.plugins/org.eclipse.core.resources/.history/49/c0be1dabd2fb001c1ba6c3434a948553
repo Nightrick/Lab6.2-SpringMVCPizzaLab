@@ -1,0 +1,56 @@
+package co.grandcircus.pizzalab;
+
+public class OrderDetails {
+	
+	String size;
+	int toppings;
+	boolean specialCrust;
+	String specialInstructions;
+	double orderTotal;
+	
+	public String getSpecialInstructions() {
+		return specialInstructions;
+	}
+	public void setSpecialInstructions(String specialInstructions) {
+		this.specialInstructions = specialInstructions;
+	}
+	public String getSize() {
+		return size;
+	}
+	public void setSize(String size) {
+		this.size = size;
+	}
+	public int getToppings() {
+		return toppings;
+	}
+	public void setToppings(int toppings) {
+		this.toppings = toppings;
+	}
+	public boolean getCrust() {
+		return specialCrust;
+	}
+	public void setCrust(boolean specialCrust) {
+		this.specialCrust = specialCrust;
+	}
+	
+	public void setOrderTotal(double orderTotal) {
+		if(this.size.equals("Small") && this.crust.equals("Gluten-free Crust ($2.00)")) {
+			this.orderTotal = 7.00 + (Integer.valueOf(this.toppings) * 0.50) + 2.00;
+		} else if(this.size.equals("Small") && this.crust.equals("Normal Crust")) {
+			this.orderTotal = 7.00 + (Integer.valueOf(this.toppings) * 0.50);
+		} else if(this.size.equals("Normal") && this.crust.equals("Gluten-free Crust ($2.00)")) {
+			this.orderTotal = 10.00 + (Integer.valueOf(this.toppings) * 1.00) + 2.00;
+		} else if(this.size.equals("Normal") && this.crust.equals("Normal Crust")) {
+			this.orderTotal = 10.00 + (Integer.valueOf(this.toppings) * 1.00);
+		}else if(this.size.equals("Large") && this.crust.equals("Gluten-free Crust ($2.00)")) {
+			this.orderTotal = 12.00 + (Integer.valueOf(this.toppings) * 1.25) + 2.00;
+		} else if(this.size.equals("Large") && this.crust.equals("Normal Crust")) {
+			this.orderTotal = 12.00 + (Integer.valueOf(this.toppings) * 1.25);
+		} 
+	}
+	
+	public double getOrderTotal() {
+		return orderTotal;
+	}
+		
+}

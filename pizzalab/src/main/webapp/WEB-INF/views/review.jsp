@@ -10,14 +10,14 @@
 <body>
 <div class="header">
   <h1> Tell us how we did!</h1>
-   <div class="topnav">
+  <div class="topnav">
   	<a href="/">Home</a>
-  	<a href="/hawaiianpizza">Hawaiian Pizza</a>
-  	<a href="/thebrushspecial">The Brush Special</a>
-  	<a href="/pandemicpizza">Pandemic Pizza</a>
+  	<a href="/specialtypizza/?name=Hawaiian Pizza&price=$19.59">Hawaiian Pizza</a>
+  	<a href="/specialtypizza/?name=The Brush Special&price=$19.91">The Brush Special</a>
+  	<a href="/specialtypizza/?name=Pandemic Pizza&price=$20.20">Pandemic Pizza</a>
   	<a href="/custompizza">Custom Pizza</a>
   	<a class="active" href="/review">Review Us</a>  
-   </div> 
+  </div>
 </div>
 <br><br><br>
 <form class="form" method = "POST" action ="/reviewconfirmation"> 

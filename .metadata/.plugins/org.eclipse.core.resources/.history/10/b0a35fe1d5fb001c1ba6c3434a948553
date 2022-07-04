@@ -1,0 +1,57 @@
+package co.grandcircus.pizzalab;
+
+public class OrderDetails {
+	
+	String size;
+	int toppings;
+	boolean specialCrust;
+	String specialInstructions;
+	
+	public String getSpecialInstructions() {
+		return specialInstructions;
+	}
+	public void setSpecialInstructions(String specialInstructions) {
+		this.specialInstructions = specialInstructions;
+	}
+	public String getSize() {
+		return size;
+	}
+	public void setSize(String size) {
+		this.size = size;
+	}
+	public int getToppings() {
+		return toppings;
+	}
+	public void setToppings(int toppings) {
+		this.toppings = toppings;
+	}
+	public boolean getSpecialCrust() {
+		return specialCrust;
+	}
+	public void setSpecialCrust(boolean specialCrust) {
+		this.specialCrust = specialCrust;
+	}
+	
+	public String calculateOrderTotal() {
+		
+		double orderTotal = 0;
+		
+		if(this.size.equals("Small")) {
+			orderTotal += 7.00;
+			orderTotal += this.toppings * 0.50;
+		} else if(this.size.equals("Medium")) {
+			orderTotal += 10.00;
+			orderTotal += this.toppings * 1.00;
+		} else if (this.size.equals("Large")) {
+			orderTotal += 12.00;
+			orderTotal += this.toppings * 1.25;
+		}
+		
+		if(this.specialCrust) {
+			orderTotal += 2.00;
+		}			
+		
+		return "$" + Double.toString(orderTotal);
+	}
+		
+}

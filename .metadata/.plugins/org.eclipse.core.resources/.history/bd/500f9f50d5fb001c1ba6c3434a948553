@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Custom Pizza Confirmation</title>
+<link rel="stylesheet" href = "/style.css" />
+</head>
+<body>
+<div class ="header">
+  <h1>Thanks for your order!</h1>
+    <div class="topnav">
+  	<a href="/">Home</a>
+  	<a href="/hawaiianpizza">Hawaiian Pizza</a>
+  	<a href="/thebrushspecial">The Brush Special</a>
+  	<a href="/pandemicpizza">Pandemic Pizza</a>
+  	<a class="active" href="/custompizza">Custom Pizza</a>
+  	<a href="/review">Review Us</a>  
+   </div> 
+</div>
+<div>
+<br><br><h2 class="reviewdetailsheader">You entered: </h2>
+<br>
+<div class="reviewdetails">Size: ${orderDetails.size}</div><br>
+<div class="reviewdetails">Toppings: ${orderDetails.toppings}</div><br>
+<div class="reviewdetails">Gluten-free Crust: ${orderDetails.specialCrust}</div><br>
+<div class="reviewdetails">Special Instructions: ${orderDetails.specialInstructions}</div><br>
+<div class="ordertotal">Your total is: $${orderDetails.calculateOrderTotal()} </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Pizza your way!</title>
+<link rel="stylesheet" href = "/style.css" />
+</head>
+<body>
+<div class="header">
+        <h1> Pizza your way!</h1>
+  <div class="topnav">
+  	<a href="/">Home</a>
+  	<a href="/hawaiianpizza">Hawaiian Pizza</a>
+  	<a href="/thebrushspecial">The Brush Special</a>
+  	<a href="/pandemicpizza">Pandemic Pizza</a>
+  	<a class="active" href="/custompizza">Custom Pizza</a>
+  	<a href="/review">Review Us</a>  
+   </div>
+</div>
+<h2 class="customheader">Tell Charles E. Cheddar how you want your piping hot pizza pie!</h2>
+<label for="customsize" class= "customsize">Size:</label>
+<select name="customsize" id="customsize" class= "customsize">
+  <option value="Small">Small</option>
+  <option value="Medium">Medium</option>
+  <option value="Large">Large</option>
+  <option value="Extra Large">Extra Large (XL)</option>
+</select>
+</div>
+</body>
+</html>
