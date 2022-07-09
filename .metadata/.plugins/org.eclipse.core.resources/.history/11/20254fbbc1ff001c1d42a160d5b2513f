@@ -1,0 +1,16 @@
+package co.grandcircus.pizzalab;
+
+import org.apache.el.util.Validation;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import javax.validation.Validation;
+
+@SpringBootApplication
+public class PizzalabApplication {
+
+	public static void main(String[] args) {
+		ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFacotry();
+		SpringApplication.run(PizzalabApplication.class, args);
+	}
+
+}

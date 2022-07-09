@@ -1,8 +1,12 @@
 package co.grandcircus.pizzalab;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,14 +25,23 @@ public class PizzaLabController {
 	public String customPizza() {
 		return "custompizza";
 	}
+
 	
 	@PostMapping("/custompizzaconfirmation")
-	public ModelAndView customPizzaConfirmation(OrderDetails details) {
-		ModelAndView modelAndView = new ModelAndView("custompizzaconfirmation");
+	public ModelAndView customPizzaConfirmation(@Valid OrderDetails details, BindingResult bindingResult) {
+		
+		ModelAndView modelAndView; //= new ModelAndView("reviewconfirmation");
+			
+		if (bindingResult.hasErrors()) {
+			modelAndView = new ModelAndView("custompizza");
+			modelAndView.addObject("errors", bindingResult.getAllErrors());
+		} else {
+			modelAndView = new ModelAndView("custompizzaconfirmation");
+		}
 		modelAndView.addObject("orderDetails", details);
-		System.out.println(details);
-		return modelAndView;
+		return modelAndView;	
 	}
+
 	
 	@RequestMapping("/review")
 	public String review() {
@@ -36,29 +49,22 @@ public class PizzaLabController {
 	}
 	
 	@PostMapping("/reviewconfirmation")
-	public ModelAndView reviewConfirmation(Review review) {
-		ModelAndView modelAndView = new ModelAndView("reviewconfirmation");
+	public ModelAndView reviewConfirmation(@Valid Review review, BindingResult bindingResult) {
+		
+		ModelAndView modelAndView; //= new ModelAndView("reviewconfirmation");
+		
+		if (bindingResult.hasErrors()) {
+			modelAndView = new ModelAndView("review");
+			modelAndView.addObject("errors", bindingResult.getAllErrors());
+		} else {
+			modelAndView = new ModelAndView("reviewconfirmation");
+			System.out.println(review);
+		}
+		System.out.println(bindingResult);
 		modelAndView.addObject("reviewDetails", review);
-		System.out.println(review);
-		return modelAndView;
+		return modelAndView;	
 	}
 	
-	/*
-	@RequestMapping("/hawaiianpizza")
-	public String hawaiianPizza() {
-		return "hawaiianpizza";
-	}
-	
-	@RequestMapping("/thebrushspecial")
-	public String theBrushSpecial() {
-		return "thebrushspecial";
-	}
-	
-	@RequestMapping("/pandemicpizza")
-	public String pandemicPizza() {
-		return "pandemicpizza";
-	}
-	*/
 	
 	@GetMapping("/specialtypizza")
 	public ModelAndView specialtyPizza(@RequestParam String name, @RequestParam String price) {

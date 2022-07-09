@@ -4,10 +4,20 @@ import java.text.NumberFormat;
 import java.util.Currency;
 import java.util.Locale;
 
+import javax.validation.constraints.Digits;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.Size;
+
 public class OrderDetails {
 	
 	String size;
+	
+	@Min(0)
+	@Max(10)
 	int toppings;
+	
 	boolean specialCrust;
 	String specialInstructions;
 	
